@@ -1,9 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useRef } from "react";
-import { motion, useScroll, useTransform, type Variants } from "framer-motion";
-import { ShieldCheck, ArrowRight } from "@phosphor-icons/react";
+import { motion, type Variants } from "framer-motion";
+import { ShieldCheck, ArrowRight, CaretRight } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/button";
 import { DashboardMockup } from "@/components/site/dashboard-mockup";
 
@@ -23,55 +22,40 @@ const item: Variants = {
 };
 
 export function Hero() {
-  const frameRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: frameRef,
-    offset: ["start 0.85", "end start"],
-  });
-
-  const rotateX = useTransform(scrollYProgress, [0, 0.32], [15, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.32], [0.94, 1]);
-
   return (
-    <section className="mesh-light relative overflow-hidden pt-36 pb-20 sm:pt-44 sm:pb-28">
+    <section className="mesh-light relative overflow-hidden pt-36 pb-20 sm:pt-44 sm:pb-24">
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
         <motion.div variants={container} initial="hidden" animate="show">
-          <motion.div
-            variants={item}
-            className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/8 px-3.5 py-1.5 font-mono text-xs tracking-wide text-primary"
-          >
-            <ShieldCheck size={15} weight="fill" />
-            Bot &amp; DDoS protection on Cloudflare Turnstile
-          </motion.div>
-
           <motion.h1
             variants={item}
-            className="mt-6 text-4xl leading-[1.04] font-semibold tracking-tight text-balance text-foreground sm:text-5xl lg:text-[3.75rem]"
+            className="text-5xl leading-[0.98] font-bold tracking-tight text-balance text-foreground sm:text-6xl lg:text-7xl"
           >
-            Link protection that lets{" "}
-            <span className="text-gradient">only humans</span> through
+            Links, <span className="text-gradient">Protected</span>
           </motion.h1>
 
           <motion.p
             variants={item}
-            className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-pretty text-muted-foreground sm:text-lg"
+            className="mx-auto mt-7 max-w-xl text-lg leading-relaxed text-pretty text-muted-foreground sm:text-xl"
           >
-            7Link verifies every click through Cloudflare Turnstile in a fraction
-            of a second and instantly sends real visitors to your site — with no
-            ads and no extra clicks.
+            Verify every click with{" "}
+            <span className="font-semibold text-foreground">Cloudflare Turnstile</span>{" "}
+            and send{" "}
+            <span className="font-semibold text-foreground">real visitors</span>{" "}
+            straight to your site.
           </motion.p>
 
           <motion.div
             variants={item}
-            className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row"
+            className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row"
           >
             <Button
               render={<Link href="/contact" />}
-              className="group h-12 w-full rounded-full px-6 text-[0.95rem] sm:w-auto"
+              className="group h-12 w-full rounded-full px-6 text-[0.95rem] shadow-blue-btn sm:w-auto"
             >
+              <ShieldCheck size={18} weight="fill" />
               Protect your site
               <ArrowRight
-                size={18}
+                size={17}
                 weight="bold"
                 className="transition-transform group-hover:translate-x-0.5"
               />
@@ -79,28 +63,45 @@ export function Hero() {
             <Button
               variant="outline"
               render={<Link href="/#how" />}
-              className="h-12 w-full rounded-full border-border px-6 text-[0.95rem] sm:w-auto"
+              className="h-12 w-full gap-2 rounded-full border-border bg-card px-3 pr-5 text-[0.95rem] sm:w-auto"
             >
+              <span className="flex size-7 items-center justify-center rounded-full bg-muted text-primary">
+                <CaretRight size={14} weight="bold" />
+              </span>
               How it works
             </Button>
           </motion.div>
+
+          <motion.div
+            variants={item}
+            className="mt-8 flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5 font-mono text-xs text-muted-foreground"
+          >
+            <span className="text-foreground/75">Cloudflare Turnstile</span>
+            <span className="text-border">·</span>
+            <span>Bot &amp; DDoS protection</span>
+            <span className="text-border">·</span>
+            <span className="text-foreground/75">Instant redirect</span>
+          </motion.div>
+
+          <motion.p
+            variants={item}
+            className="mt-3 text-xs text-muted-foreground/70"
+          >
+            Built on Cloudflare&apos;s global edge network.
+          </motion.p>
         </motion.div>
       </div>
 
       <motion.div
-        initial={{ opacity: 0, y: 36 }}
+        initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.25 }}
-        className="mx-auto mt-20 max-w-5xl px-4 sm:px-6 [perspective:1600px]"
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.35 }}
+        className="mx-auto mt-16 max-w-5xl px-4 sm:px-6"
       >
-        <motion.div
-          ref={frameRef}
-          style={{ rotateX, scale, transformOrigin: "center top" }}
-          className="relative"
-        >
+        <div className="relative">
           <div className="absolute -inset-x-10 -top-10 bottom-0 -z-10 rounded-[3rem] bg-primary/10 blur-3xl" />
           <DashboardMockup />
-        </motion.div>
+        </div>
       </motion.div>
     </section>
   );
