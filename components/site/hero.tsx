@@ -13,11 +13,12 @@ const container: Variants = {
 };
 
 const item: Variants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 24, filter: "blur(10px)" },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] },
+    filter: "blur(0px)",
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
   },
 };
 
@@ -32,9 +33,7 @@ export function Hero() {
   const scale = useTransform(scrollYProgress, [0, 0.32], [0.94, 1]);
 
   return (
-    <section className="mesh-light relative overflow-hidden pt-32 pb-16 sm:pt-40 sm:pb-24">
-      <div className="bg-grid bg-grid-fade absolute inset-0 -z-10" />
-
+    <section className="mesh-light relative overflow-hidden pt-36 pb-20 sm:pt-44 sm:pb-28">
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
         <motion.div variants={container} initial="hidden" animate="show">
           <motion.div
@@ -50,7 +49,7 @@ export function Hero() {
             className="mt-6 text-4xl leading-[1.04] font-semibold tracking-tight text-balance text-foreground sm:text-5xl lg:text-[3.75rem]"
           >
             Защита ссылок, которая пропускает{" "}
-            <span className="text-primary">только людей</span>
+            <span className="text-gradient">только людей</span>
           </motion.h1>
 
           <motion.p
@@ -92,7 +91,7 @@ export function Hero() {
         initial={{ opacity: 0, y: 36 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.25 }}
-        className="mx-auto mt-16 max-w-5xl px-4 sm:px-6 [perspective:1600px]"
+        className="mx-auto mt-20 max-w-5xl px-4 sm:px-6 [perspective:1600px]"
       >
         <motion.div
           ref={frameRef}

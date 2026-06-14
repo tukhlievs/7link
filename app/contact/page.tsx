@@ -72,7 +72,7 @@ export default function ContactPage() {
           );
 
           const cardClass =
-            "block rounded-3xl border border-border bg-card p-7 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_24px_60px_-30px_rgba(20,100,60,0.4)]";
+            "block rounded-2xl border border-border bg-card p-7 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-card-hover";
 
           return item.href ? (
             <a

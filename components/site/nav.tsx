@@ -30,7 +30,7 @@ export function SiteNav() {
         <div
           className={`mt-3 flex h-14 items-center justify-between rounded-2xl px-3 pr-3 pl-4 transition-all duration-300 ${
             scrolled
-              ? "border border-border/80 bg-background/80 shadow-[0_8px_30px_-12px_rgba(20,80,50,0.25)] backdrop-blur-xl"
+              ? "border border-border/80 bg-background/80 shadow-[0_8px_30px_-12px_rgba(37,99,235,0.18)] backdrop-blur-xl"
               : "border border-transparent"
           }`}
         >

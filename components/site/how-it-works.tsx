@@ -10,10 +10,11 @@ import {
   CheckCircle,
   Cursor,
 } from "@phosphor-icons/react";
+import { TiltCard } from "@/components/site/tilt-card";
 
 function TrafficCard() {
   return (
-    <div className="w-full max-w-sm rounded-2xl border border-border bg-card p-5 shadow-soft">
+    <div className="card-designer w-full max-w-sm rounded-2xl p-5">
       <div className="flex items-center justify-between rounded-xl border border-border bg-background px-4 py-3">
         <span className="font-mono text-sm font-medium text-foreground">
           7l.ink/launch
@@ -38,7 +39,7 @@ function TrafficCard() {
 
 function TurnstileCard() {
   return (
-    <div className="w-full max-w-sm rounded-2xl border border-border bg-card p-5 shadow-soft">
+    <div className="card-designer w-full max-w-sm rounded-2xl p-5">
       <div className="flex items-center justify-between rounded-xl border border-border bg-background px-4 py-3.5">
         <div className="flex items-center gap-3">
           <span className="flex size-6 items-center justify-center rounded-md bg-primary text-primary-foreground">
@@ -60,7 +61,7 @@ function TurnstileCard() {
 
 function BlockedCard() {
   return (
-    <div className="w-full max-w-sm rounded-2xl border border-border bg-card p-5 shadow-soft">
+    <div className="card-designer w-full max-w-sm rounded-2xl p-5">
       <div className="flex items-center gap-3 rounded-xl border border-destructive/25 bg-destructive/5 px-4 py-3.5">
         <span className="flex size-9 items-center justify-center rounded-lg bg-destructive/10 text-destructive">
           <Prohibit size={20} weight="bold" />
@@ -83,7 +84,7 @@ function BlockedCard() {
 
 function RedirectCard() {
   return (
-    <div className="w-full max-w-sm rounded-2xl border border-border bg-card p-5 shadow-soft">
+    <div className="card-designer w-full max-w-sm rounded-2xl p-5">
       <div className="flex items-center gap-3 rounded-xl border border-primary/25 bg-primary/5 px-4 py-3.5">
         <span className="flex size-9 items-center justify-center rounded-lg bg-primary/12 text-primary">
           <CheckCircle size={20} weight="fill" />
@@ -129,7 +130,7 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how" className="relative px-4 py-28 sm:px-6 sm:py-36">
+    <section id="how" className="relative px-4 py-32 sm:px-6 sm:py-44">
       <div className="mx-auto max-w-5xl">
         <div className="mx-auto max-w-2xl text-center">
           <span className="font-mono text-xs tracking-widest text-primary uppercase">
@@ -140,7 +141,7 @@ export function HowItWorks() {
           </h2>
         </div>
 
-        <div className="mt-20 space-y-24">
+        <div className="mt-20 space-y-28">
           {steps.map((step, i) => {
             const reversed = i % 2 === 1;
             return (
@@ -179,7 +180,7 @@ export function HowItWorks() {
                     reversed ? "lg:order-1 lg:justify-start" : "lg:justify-end"
                   }`}
                 >
-                  {step.visual}
+                  <TiltCard>{step.visual}</TiltCard>
                 </motion.div>
               </div>
             );
