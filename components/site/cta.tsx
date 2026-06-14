@@ -1,0 +1,41 @@
+"use client";
+
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { ArrowRight } from "@phosphor-icons/react";
+import { Button } from "@/components/ui/button";
+
+export function CallToAction() {
+  return (
+    <section className="px-4 pb-28 sm:px-6 sm:pb-36">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-80px" }}
+        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        className="mesh-ink grain relative mx-auto max-w-6xl overflow-hidden rounded-4xl px-8 py-16 text-center text-ink-foreground sm:px-16 sm:py-24"
+      >
+        <h2 className="relative mx-auto max-w-2xl text-3xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-5xl">
+          Готовы защитить свой сайт?
+        </h2>
+        <p className="relative mx-auto mt-5 max-w-xl text-base text-pretty text-ink-muted sm:text-lg">
+          Подключите 7Link и пропускайте только настоящих посетителей — быстро,
+          без рекламы и без лишних кликов.
+        </p>
+        <div className="relative mt-9 flex justify-center">
+          <Button
+            render={<Link href="/contact" />}
+            className="group h-12 rounded-full bg-glow px-7 text-[0.95rem] text-ink hover:bg-glow-soft"
+          >
+            Защитить сайт
+            <ArrowRight
+              size={18}
+              weight="bold"
+              className="transition-transform group-hover:translate-x-0.5"
+            />
+          </Button>
+        </div>
+      </motion.div>
+    </section>
+  );
+}
