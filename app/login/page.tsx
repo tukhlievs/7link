@@ -11,7 +11,6 @@ import { Label } from "@/components/ui/label";
 
 export default function LoginPage() {
   const router = useRouter();
-  const supabase = createClient();
 
   const [mode, setMode] = useState<"signin" | "signup">("signin");
   const [email, setEmail] = useState("");
@@ -24,6 +23,7 @@ export default function LoginPage() {
   async function handleGoogle() {
     setError(null);
     setGoogleLoading(true);
+    const supabase = createClient();
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: { redirectTo: `${process.env.NEXT_PUBLIC_APP_URL || window.location.origin}/auth/callback` },
@@ -39,6 +39,7 @@ export default function LoginPage() {
     setError(null);
     setMessage(null);
     setLoading(true);
+    const supabase = createClient();
 
     if (mode === "signin") {
       const { error } = await supabase.auth.signInWithPassword({
