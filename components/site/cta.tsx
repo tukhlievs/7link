@@ -1,9 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/button";
+
+const appUrl = process.env.NEXT_PUBLIC_APP_URL || "/contact";
 
 export function CallToAction() {
   return (
@@ -24,7 +25,7 @@ export function CallToAction() {
         </p>
         <div className="relative mt-9 flex justify-center">
           <Button
-            render={<Link href="/contact" />}
+            render={<a href={appUrl} />}
             className="group h-12 rounded-full bg-glow px-7 text-[0.95rem] text-ink hover:bg-glow-soft"
           >
             Protect your site

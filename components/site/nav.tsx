@@ -8,6 +8,8 @@ import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/site/logo";
 import { nav } from "@/lib/site-data";
 
+const appUrl = process.env.NEXT_PUBLIC_APP_URL || "/contact";
+
 export function SiteNav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -56,7 +58,7 @@ export function SiteNav() {
 
           <div className="flex items-center gap-2">
             <Button
-              render={<Link href="/contact" />}
+              render={<a href={appUrl} />}
               className="hidden h-10 rounded-full px-5 text-sm sm:inline-flex"
             >
               Protect your site
@@ -89,7 +91,7 @@ export function SiteNav() {
               </Link>
             ))}
             <Button
-              render={<Link href="/contact" />}
+              render={<a href={appUrl} />}
               className="mt-1 h-11 rounded-xl"
               onClick={() => setOpen(false)}
             >

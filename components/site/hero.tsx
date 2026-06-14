@@ -6,6 +6,8 @@ import { ShieldCheck, ArrowRight, CaretRight } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/button";
 import { DashboardMockup } from "@/components/site/dashboard-mockup";
 
+const appUrl = process.env.NEXT_PUBLIC_APP_URL || "/contact";
+
 const container: Variants = {
   hidden: {},
   show: { transition: { staggerChildren: 0.08, delayChildren: 0.05 } },
@@ -49,7 +51,7 @@ export function Hero() {
             className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row"
           >
             <Button
-              render={<Link href="/contact" />}
+              render={<a href={appUrl} />}
               className="group h-12 w-full rounded-full px-6 text-[0.95rem] shadow-blue-btn sm:w-auto"
             >
               <ShieldCheck size={18} weight="fill" />
