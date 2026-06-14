@@ -16,18 +16,18 @@ export function CallToAction() {
         className="mesh-ink grain relative mx-auto max-w-6xl overflow-hidden rounded-4xl px-8 py-16 text-center text-ink-foreground sm:px-16 sm:py-24"
       >
         <h2 className="relative mx-auto max-w-2xl text-3xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-5xl">
-          Готовы защитить свой сайт?
+          Ready to protect your site?
         </h2>
         <p className="relative mx-auto mt-5 max-w-xl text-base text-pretty text-ink-muted sm:text-lg">
-          Подключите 7Link и пропускайте только настоящих посетителей — быстро,
-          без рекламы и без лишних кликов.
+          Connect 7Link and let only real visitors through — fast, with no ads
+          and no extra clicks.
         </p>
         <div className="relative mt-9 flex justify-center">
           <Button
             render={<Link href="/contact" />}
             className="group h-12 rounded-full bg-glow px-7 text-[0.95rem] text-ink hover:bg-glow-soft"
           >
-            Защитить сайт
+            Protect your site
             <ArrowRight
               size={18}
               weight="bold"

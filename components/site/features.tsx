@@ -31,10 +31,10 @@ export function Features() {
       <div className="mx-auto max-w-5xl">
         <div className="max-w-2xl">
           <span className="font-mono text-xs tracking-widest text-primary uppercase">
-            Преимущества
+            Advantages
           </span>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-balance text-foreground sm:text-4xl lg:text-5xl">
-            Защита, которая не мешает посетителям
+            Protection that never gets in the way
           </h2>
         </div>
 
@@ -51,11 +51,11 @@ export function Features() {
                     <ShieldCheck size={26} weight="duotone" />
                   </Icon>
                   <h3 className="mt-6 text-xl font-semibold tracking-tight text-foreground">
-                    Безлимитная защита от ботов и DDoS
+                    Unlimited bot &amp; DDoS protection
                   </h3>
                   <p className="mt-2.5 max-w-md text-[0.95rem] leading-relaxed text-muted-foreground">
-                    Постоянный щит от автоматического трафика и атак на ваши
-                    ссылки — без ограничений по объёму.
+                    A constant shield against automated traffic and attacks on
+                    your links — with no volume limits.
                   </p>
                 </div>
                 <div className="mt-7 space-y-2">
@@ -68,7 +68,7 @@ export function Features() {
                       <span className="font-mono text-xs text-muted-foreground">{ip}</span>
                       <span className="ml-auto inline-flex items-center gap-1 text-xs font-medium text-destructive">
                         <Prohibit size={12} weight="bold" />
-                        Заблокирован
+                        Blocked
                       </span>
                     </div>
                   ))}
@@ -88,10 +88,10 @@ export function Features() {
                     <InfinityIcon size={26} weight="bold" />
                   </Icon>
                   <h3 className="mt-6 text-xl font-semibold tracking-tight text-foreground">
-                    Безлимит ссылок
+                    Unlimited links
                   </h3>
                   <p className="mt-2.5 text-[0.95rem] leading-relaxed text-muted-foreground">
-                    Создавайте сколько угодно защищённых ссылок без ограничений.
+                    Create as many protected links as you want, with no limits.
                   </p>
                 </div>
                 <p className="mt-7 font-mono text-5xl font-semibold tracking-tight text-gradient">
@@ -112,10 +112,10 @@ export function Features() {
                     <Lightning size={26} weight="duotone" />
                   </Icon>
                   <h3 className="mt-6 text-xl font-semibold tracking-tight text-foreground">
-                    Минимум кликов
+                    Minimal clicks
                   </h3>
                   <p className="mt-2.5 text-[0.95rem] leading-relaxed text-muted-foreground">
-                    Одно подтверждение Turnstile — и мгновенный переход на сайт.
+                    One Turnstile confirmation — and an instant jump to your site.
                   </p>
                 </div>
                 <div className="mt-7">
@@ -142,25 +142,25 @@ export function Features() {
                     <Browsers size={26} weight="duotone" />
                   </Icon>
                   <h3 className="mt-6 text-xl font-semibold tracking-tight text-foreground">
-                    Нет рекламы на весь экран
+                    No full-screen ads
                   </h3>
                   <p className="mt-2.5 max-w-md text-[0.95rem] leading-relaxed text-muted-foreground">
-                    Никаких баннеров и оверлеев между посетителем и вашим сайтом —
-                    только проверка и переход.
+                    No banners or overlays between the visitor and your site —
+                    just verification and redirect.
                   </p>
                 </div>
                 <div className="mt-7 flex items-center gap-3">
                   <div className="flex-1 rounded-xl border border-dashed border-destructive/40 bg-destructive/5 px-4 py-3 text-center">
                     <span className="inline-flex items-center gap-1.5 text-xs font-medium text-destructive line-through">
                       <Prohibit size={13} weight="bold" />
-                      Реклама на весь экран
+                      Full-screen ads
                     </span>
                   </div>
                   <ArrowChip />
                   <div className="flex-1 rounded-xl border border-primary/30 bg-primary/5 px-4 py-3 text-center">
                     <span className="inline-flex items-center gap-1.5 text-xs font-medium text-primary">
                       <Lightning size={13} weight="fill" />
-                      Сразу на сайт
+                      Straight to the site
                     </span>
                   </div>
                 </div>

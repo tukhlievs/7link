@@ -24,12 +24,12 @@ function TrafficCard() {
       <div className="mt-4 space-y-2.5">
         <div className="flex items-center gap-3 rounded-lg bg-muted/60 px-3 py-2">
           <Cursor size={18} weight="duotone" className="text-primary" />
-          <span className="text-sm text-foreground">Посетитель</span>
+          <span className="text-sm text-foreground">Visitor</span>
           <ArrowRight size={14} weight="bold" className="ml-auto text-muted-foreground" />
         </div>
         <div className="flex items-center gap-3 rounded-lg bg-muted/60 px-3 py-2">
           <Robot size={18} weight="duotone" className="text-muted-foreground" />
-          <span className="text-sm text-muted-foreground">Бот</span>
+          <span className="text-sm text-muted-foreground">Bot</span>
           <ArrowRight size={14} weight="bold" className="ml-auto text-muted-foreground" />
         </div>
       </div>
@@ -45,7 +45,7 @@ function TurnstileCard() {
           <span className="flex size-6 items-center justify-center rounded-md bg-primary text-primary-foreground">
             <Check size={14} weight="bold" />
           </span>
-          <span className="text-sm font-medium text-foreground">Вы человек</span>
+          <span className="text-sm font-medium text-foreground">Verified human</span>
         </div>
         <div className="flex items-center gap-1.5 text-muted-foreground">
           <Cloud size={16} weight="fill" />
@@ -53,7 +53,7 @@ function TurnstileCard() {
         </div>
       </div>
       <p className="mt-2.5 px-1 font-mono text-[10px] tracking-wide text-muted-foreground">
-        Проверка Cloudflare · Конфиденциальность · Условия
+        Cloudflare check · Privacy · Terms
       </p>
     </div>
   );
@@ -67,14 +67,14 @@ function BlockedCard() {
           <Prohibit size={20} weight="bold" />
         </span>
         <div>
-          <p className="text-sm font-medium text-foreground">Доступ заблокирован</p>
-          <p className="text-xs text-muted-foreground">Автоматический трафик</p>
+          <p className="text-sm font-medium text-foreground">Access blocked</p>
+          <p className="text-xs text-muted-foreground">Automated traffic</p>
         </div>
       </div>
       <div className="mt-3 flex items-center justify-between px-1">
         <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
           <Robot size={14} weight="duotone" />
-          Ботов сегодня
+          Bots today
         </span>
         <span className="font-mono text-sm font-semibold text-foreground">9 312</span>
       </div>
@@ -90,7 +90,7 @@ function RedirectCard() {
           <CheckCircle size={20} weight="fill" />
         </span>
         <div>
-          <p className="text-sm font-medium text-foreground">Перенаправлено</p>
+          <p className="text-sm font-medium text-foreground">Redirected</p>
           <p className="font-mono text-xs text-muted-foreground">→ yoursite.com</p>
         </div>
       </div>
@@ -104,26 +104,26 @@ function RedirectCard() {
 const steps = [
   {
     n: "01",
-    title: "Трафик приходит на ссылку",
-    text: "Посетитель или бот открывает вашу защищённую ссылку 7Link. Каждый переход попадает на проверку.",
+    title: "Traffic hits the link",
+    text: "A visitor or bot opens your protected 7Link URL. Every click goes through verification.",
     visual: <TrafficCard />,
   },
   {
     n: "02",
-    title: "Cloudflare Turnstile проверяет",
-    text: "Turnstile анализирует поведение за доли секунды. Настоящему человеку остаётся одно подтверждение, чаще всего — невидимое.",
+    title: "Cloudflare Turnstile verifies",
+    text: "Turnstile analyzes behavior in a fraction of a second. For a real person it is one confirmation — most often invisible.",
     visual: <TurnstileCard />,
   },
   {
     n: "03",
-    title: "Боты и атаки отсекаются",
-    text: "Автоматический трафик и DDoS-запросы останавливаются на этом шаге и не доходят до вашего сайта.",
+    title: "Bots and attacks are stopped",
+    text: "Automated traffic and DDoS requests are stopped at this step and never reach your site.",
     visual: <BlockedCard />,
   },
   {
     n: "04",
-    title: "Мгновенный редирект",
-    text: "Проверенный посетитель сразу попадает на ваш сайт — без рекламы, ожидания и лишних кликов.",
+    title: "Instant redirect",
+    text: "The verified visitor lands on your site right away — no ads, no waiting, no extra clicks.",
     visual: <RedirectCard />,
   },
 ];
@@ -134,10 +134,10 @@ export function HowItWorks() {
       <div className="mx-auto max-w-5xl">
         <div className="mx-auto max-w-2xl text-center">
           <span className="font-mono text-xs tracking-widest text-primary uppercase">
-            Как это работает
+            How it works
           </span>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-balance text-foreground sm:text-4xl lg:text-5xl">
-            Четыре шага между ботом и вашим сайтом
+            Four steps between a bot and your site
           </h2>
         </div>
 

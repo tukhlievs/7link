@@ -11,7 +11,7 @@ import { contact } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Contact us — 7Link",
   description:
-    "Свяжитесь с командой 7Link: адрес, телефон, Telegram и электронная почта.",
+    "Get in touch with the 7Link team: location, phone, Telegram, and email.",
 };
 
 const items = [
@@ -49,8 +49,8 @@ export default function ContactPage() {
   return (
     <PageShell
       eyebrow="Contact us"
-      title="Свяжитесь с нами"
-      intro="Мы на связи и готовы помочь с подключением и защитой ваших ссылок."
+      title="Get in touch"
+      intro="We're here to help you set up and protect your links."
     >
       <div className="grid gap-4 sm:grid-cols-2">
         {items.map((item) => {

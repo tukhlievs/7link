@@ -59,12 +59,12 @@ export function SiteNav() {
               render={<Link href="/contact" />}
               className="hidden h-10 rounded-full px-5 text-sm sm:inline-flex"
             >
-              Защитить сайт
+              Protect your site
             </Button>
             <button
               type="button"
               onClick={() => setOpen((v) => !v)}
-              aria-label="Меню"
+              aria-label="Menu"
               className="flex size-10 items-center justify-center rounded-full border border-border text-foreground transition-colors hover:bg-muted md:hidden"
             >
               {open ? <X size={20} weight="bold" /> : <List size={20} weight="bold" />}
@@ -93,7 +93,7 @@ export function SiteNav() {
               className="mt-1 h-11 rounded-xl"
               onClick={() => setOpen(false)}
             >
-              Защитить сайт
+              Protect your site
             </Button>
           </motion.nav>
         )}

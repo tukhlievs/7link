@@ -9,18 +9,18 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 
 const links = [
-  { slug: "7l.ink/launch", dest: "producthunt.com", clicks: "42 310" },
-  { slug: "7l.ink/promo", dest: "shop.example.com", clicks: "31 540" },
-  { slug: "7l.ink/docs", dest: "docs.example.io", clicks: "18 902" },
-  { slug: "7l.ink/vip", dest: "t.me/channel", clicks: "9 786" },
+  { slug: "7l.ink/launch", dest: "producthunt.com", clicks: "42,310" },
+  { slug: "7l.ink/promo", dest: "shop.example.com", clicks: "31,540" },
+  { slug: "7l.ink/docs", dest: "docs.example.io", clicks: "18,902" },
+  { slug: "7l.ink/vip", dest: "t.me/channel", clicks: "9,786" },
 ];
 
 const navItems = [
-  { icon: House, label: "Обзор", active: false },
-  { icon: LinkSimple, label: "Ссылки", active: true },
-  { icon: ChartBar, label: "Аналитика", active: false },
-  { icon: ShieldCheck, label: "Защита", active: false },
-  { icon: Gear, label: "Настройки", active: false },
+  { icon: House, label: "Overview", active: false },
+  { icon: LinkSimple, label: "Links", active: true },
+  { icon: ChartBar, label: "Analytics", active: false },
+  { icon: ShieldCheck, label: "Protection", active: false },
+  { icon: Gear, label: "Settings", active: false },
 ];
 
 function Sparkline() {
@@ -85,56 +85,56 @@ export function DashboardMockup() {
           <div className="flex items-center justify-between">
             <div>
               <h3 className="text-base font-semibold tracking-tight text-foreground">
-                Мои ссылки
+                My links
               </h3>
               <p className="text-xs text-muted-foreground">
-                Защита активна на всех ссылках
+                Protection active on all links
               </p>
             </div>
             <span className="inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1.5 text-xs font-medium text-primary-foreground">
               <Plus size={13} weight="bold" />
-              Создать
+              Create
             </span>
           </div>
 
           <div className="mt-4 grid grid-cols-3 gap-2.5">
             <div className="rounded-xl border border-border bg-background p-3">
-              <p className="text-[11px] text-muted-foreground">Переходов</p>
+              <p className="text-[11px] text-muted-foreground">Clicks</p>
               <p className="mt-1 font-mono text-lg font-semibold tracking-tight text-foreground">
-                128 540
+                128,540
               </p>
               <div className="mt-1 text-primary">
                 <Sparkline />
               </div>
             </div>
             <div className="rounded-xl border border-border bg-background p-3">
-              <p className="text-[11px] text-muted-foreground">Боты отклонены</p>
+              <p className="text-[11px] text-muted-foreground">Bots blocked</p>
               <p className="mt-1 font-mono text-lg font-semibold tracking-tight text-foreground">
-                9 312
+                9,312
               </p>
               <p className="mt-1 inline-flex items-center gap-1 text-[11px] font-medium text-primary">
                 <ShieldCheck size={12} weight="fill" />
-                заблокировано
+                blocked
               </p>
             </div>
             <div className="rounded-xl border border-border bg-background p-3">
-              <p className="text-[11px] text-muted-foreground">Аптайм</p>
+              <p className="text-[11px] text-muted-foreground">Uptime</p>
               <p className="mt-1 font-mono text-lg font-semibold tracking-tight text-foreground">
                 99.99%
               </p>
               <p className="mt-1 inline-flex items-center gap-1 text-[11px] font-medium text-primary">
                 <TrendUp size={12} weight="bold" />
-                30 дней
+                30 days
               </p>
             </div>
           </div>
 
           <div className="mt-3 overflow-hidden rounded-xl border border-border">
             <div className="hidden grid-cols-[1.4fr_1.2fr_0.7fr_0.9fr] gap-2 border-b border-border bg-muted/40 px-3.5 py-2 text-[11px] font-medium tracking-wide text-muted-foreground uppercase sm:grid">
-              <span>Ссылка</span>
-              <span>Назначение</span>
-              <span className="text-right">Клики</span>
-              <span className="text-right">Статус</span>
+              <span>Link</span>
+              <span>Destination</span>
+              <span className="text-right">Clicks</span>
+              <span className="text-right">Status</span>
             </div>
             {links.map((link, i) => (
               <div
@@ -155,7 +155,7 @@ export function DashboardMockup() {
                 <span className="flex justify-end">
                   <span className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2 py-0.5 text-[11px] font-medium text-primary">
                     <ShieldCheck size={11} weight="fill" />
-                    Защищено
+                    Protected
                   </span>
                 </span>
               </div>

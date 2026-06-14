@@ -1,6 +1,5 @@
 export const contact = {
-  location: "Узбекистан, Ферганская область, город Коканд",
-  locationEn: "Uzbekistan, Fergana Region, Kokand City",
+  location: "Uzbekistan, Fergana Region, Kokand City",
   phone: "+998 93 333 67 86",
   phoneHref: "tel:+998933336786",
   telegram: "@sevenlink_click",
@@ -10,9 +9,9 @@ export const contact = {
 };
 
 export const nav = [
-  { label: "Возможности", href: "/#features" },
-  { label: "Как это работает", href: "/#how" },
-  { label: "Контакты", href: "/contact" },
+  { label: "Features", href: "/#features" },
+  { label: "How it works", href: "/#how" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const legalNav = [

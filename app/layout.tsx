@@ -4,14 +4,14 @@ import "@fontsource-variable/jetbrains-mono";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "7Link — защита сайтов на базе Cloudflare Turnstile",
+  title: "7Link — link protection powered by Cloudflare Turnstile",
   description:
-    "7Link проверяет трафик через Cloudflare Turnstile за доли секунды и мгновенно перенаправляет настоящих посетителей на ваш сайт без единого лишнего клика.",
+    "7Link verifies every click through Cloudflare Turnstile in a fraction of a second and instantly redirects real visitors to your site — with no ads and no extra clicks.",
   metadataBase: new URL("https://7link.click"),
   openGraph: {
-    title: "7Link — защита сайтов на базе Cloudflare Turnstile",
+    title: "7Link — link protection powered by Cloudflare Turnstile",
     description:
-      "Быстрая проверка трафика и мгновенный редирект. Без рекламы, без лишних кликов, безлимитная защита от ботов и DDoS.",
+      "Fast traffic verification and instant redirect. No ads, no extra clicks, unlimited protection from bots and DDoS.",
     type: "website",
   },
 };
@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru" className="h-full">
+    <html lang="en" className="h-full">
       <body className="flex min-h-full flex-col">{children}</body>
     </html>
   );

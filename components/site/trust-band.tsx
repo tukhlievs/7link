@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { Lightning } from "@phosphor-icons/react";
 
 const stats = [
-  { value: "< 1 c", label: "проверка перехода" },
-  { value: "0", label: "лишних кликов" },
-  { value: "∞", label: "ссылок и трафика" },
-  { value: "24/7", label: "защита от DDoS" },
+  { value: "< 1s", label: "click verification" },
+  { value: "0", label: "extra clicks" },
+  { value: "∞", label: "links & traffic" },
+  { value: "24/7", label: "DDoS protection" },
 ];
 
 export function TrustBand() {
@@ -16,7 +16,7 @@ export function TrustBand() {
       <div className="mx-auto max-w-5xl">
         <p className="flex items-center justify-center gap-2 text-center text-sm text-muted-foreground">
           <Lightning size={16} weight="fill" className="text-primary" />
-          Работает на глобальной сети Cloudflare
+          Powered by Cloudflare&apos;s global network
         </p>
         <div className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-4">
           {stats.map((stat, i) => (

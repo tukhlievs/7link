@@ -5,56 +5,55 @@ import { contact } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Privacy Policy — 7Link",
   description:
-    "Политика конфиденциальности сервиса 7Link: какие данные обрабатываются при защите ссылок и проверке трафика.",
+    "7Link Privacy Policy: what data is processed when protecting links and verifying traffic.",
 };
 
 export default function PrivacyPage() {
   return (
     <PageShell
       eyebrow="Privacy Policy"
-      title="Политика конфиденциальности"
-      intro="Мы обрабатываем минимум данных, необходимых для проверки трафика и защиты ваших ссылок от ботов и DDoS-атак."
+      title="Privacy Policy"
+      intro="We process the minimum data required to verify traffic and protect your links from bots and DDoS attacks."
     >
-      <LegalSection heading="Какие данные мы обрабатываем">
+      <LegalSection heading="What data we process">
         <p>
-          При переходе по защищённой ссылке 7Link обрабатывает технические
-          данные запроса: IP-адрес, тип устройства и браузера, а также токен
-          проверки Cloudflare Turnstile. Эти данные нужны для того, чтобы
-          отличить настоящего посетителя от автоматического трафика.
+          When a visitor follows a protected 7Link URL, we process technical
+          request data: IP address, device and browser type, and the Cloudflare
+          Turnstile verification token. This data is needed to tell a real
+          visitor apart from automated traffic.
         </p>
       </LegalSection>
-      <LegalSection heading="Как мы используем данные">
+      <LegalSection heading="How we use data">
         <p>
-          Данные используются исключительно для проверки трафика, защиты от
-          ботов и DDoS-атак, а также для формирования статистики переходов по
-          вашим ссылкам. Мы не продаём и не передаём данные третьим лицам в
-          рекламных целях.
+          Data is used solely to verify traffic, protect against bots and DDoS
+          attacks, and produce click statistics for your links. We do not sell
+          or share your data with third parties for advertising purposes.
         </p>
       </LegalSection>
       <LegalSection heading="Cloudflare Turnstile">
         <p>
-          Проверка посетителей выполняется с помощью Cloudflare Turnstile.
-          Обработка токенов проверки осуществляется на стороне Cloudflare в
-          соответствии с её политикой конфиденциальности.
+          Visitor verification is performed with Cloudflare Turnstile. The
+          processing of verification tokens is carried out by Cloudflare in
+          accordance with its own privacy policy.
         </p>
       </LegalSection>
-      <LegalSection heading="Хранение данных">
+      <LegalSection heading="Data retention">
         <p>
-          Технические журналы хранятся ограниченное время, достаточное для
-          обеспечения безопасности и анализа атак, после чего удаляются или
-          обезличиваются.
+          Technical logs are kept for a limited time, sufficient to ensure
+          security and analyze attacks, after which they are deleted or
+          anonymized.
         </p>
       </LegalSection>
-      <LegalSection heading="Контакты">
+      <LegalSection heading="Contact">
         <p>
-          По вопросам обработки данных напишите на{" "}
+          For any questions about data processing, write to{" "}
           <a
             href={contact.emailHref}
             className="text-primary underline-offset-4 hover:underline"
           >
             {contact.email}
           </a>{" "}
-          или в Telegram{" "}
+          or on Telegram{" "}
           <a
             href={contact.telegramHref}
             target="_blank"

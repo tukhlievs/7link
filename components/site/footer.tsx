@@ -17,14 +17,14 @@ export function SiteFooter() {
               <span className="text-lg">7Link</span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              Защита сайтов на базе Cloudflare Turnstile. Быстрая проверка
-              трафика и мгновенный редирект настоящих посетителей.
+              Link protection powered by Cloudflare Turnstile. Fast traffic
+              verification and instant redirect for real visitors.
             </p>
           </div>
 
           <div>
             <h3 className="text-sm font-semibold tracking-tight text-foreground">
-              Навигация
+              Navigation
             </h3>
             <ul className="mt-4 space-y-3">
               {nav.map((item) => (
@@ -58,7 +58,7 @@ export function SiteFooter() {
 
           <div>
             <h3 className="text-sm font-semibold tracking-tight text-foreground">
-              Контакты
+              Contact
             </h3>
             <ul className="mt-4 space-y-3.5 text-sm text-muted-foreground">
               <li className="flex items-start gap-3">
@@ -94,7 +94,7 @@ export function SiteFooter() {
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-border pt-7 sm:flex-row">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} 7Link. Все права защищены.
+            © {new Date().getFullYear()} 7Link. All rights reserved.
           </p>
           <div className="flex items-center gap-5">
             <Link

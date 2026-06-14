@@ -41,24 +41,24 @@ export function Hero() {
             className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/8 px-3.5 py-1.5 font-mono text-xs tracking-wide text-primary"
           >
             <ShieldCheck size={15} weight="fill" />
-            Защита от ботов и DDoS на Cloudflare Turnstile
+            Bot &amp; DDoS protection on Cloudflare Turnstile
           </motion.div>
 
           <motion.h1
             variants={item}
             className="mt-6 text-4xl leading-[1.04] font-semibold tracking-tight text-balance text-foreground sm:text-5xl lg:text-[3.75rem]"
           >
-            Защита ссылок, которая пропускает{" "}
-            <span className="text-gradient">только людей</span>
+            Link protection that lets{" "}
+            <span className="text-gradient">only humans</span> through
           </motion.h1>
 
           <motion.p
             variants={item}
             className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-pretty text-muted-foreground sm:text-lg"
           >
-            7Link проверяет каждый переход через Cloudflare Turnstile за доли
-            секунды и мгновенно отправляет настоящего посетителя на ваш сайт —
-            без рекламы и лишних кликов.
+            7Link verifies every click through Cloudflare Turnstile in a fraction
+            of a second and instantly sends real visitors to your site — with no
+            ads and no extra clicks.
           </motion.p>
 
           <motion.div
@@ -69,7 +69,7 @@ export function Hero() {
               render={<Link href="/contact" />}
               className="group h-12 w-full rounded-full px-6 text-[0.95rem] sm:w-auto"
             >
-              Защитить сайт
+              Protect your site
               <ArrowRight
                 size={18}
                 weight="bold"
@@ -81,7 +81,7 @@ export function Hero() {
               render={<Link href="/#how" />}
               className="h-12 w-full rounded-full border-border px-6 text-[0.95rem] sm:w-auto"
             >
-              Как это работает
+              How it works
             </Button>
           </motion.div>
         </motion.div>

@@ -5,50 +5,49 @@ import { contact } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Terms — 7Link",
   description:
-    "Условия использования сервиса 7Link для защиты сайтов и ссылок на базе Cloudflare Turnstile.",
+    "Terms of use for 7Link — link and site protection powered by Cloudflare Turnstile.",
 };
 
 export default function TermsPage() {
   return (
     <PageShell
       eyebrow="Terms"
-      title="Условия использования"
-      intro="Используя 7Link, вы соглашаетесь с условиями, описанными ниже."
+      title="Terms of Use"
+      intro="By using 7Link, you agree to the terms described below."
     >
-      <LegalSection heading="Описание сервиса">
+      <LegalSection heading="Service description">
         <p>
-          7Link предоставляет защищённые ссылки, которые проверяют входящий
-          трафик через Cloudflare Turnstile и перенаправляют настоящих
-          посетителей на указанный вами адрес. Сервис включает безлимитное
-          создание ссылок и защиту от ботов и DDoS-атак.
+          7Link provides protected links that verify incoming traffic through
+          Cloudflare Turnstile and redirect real visitors to the destination you
+          set. The service includes unlimited link creation and protection from
+          bots and DDoS attacks.
         </p>
       </LegalSection>
-      <LegalSection heading="Допустимое использование">
+      <LegalSection heading="Acceptable use">
         <p>
-          Запрещено использовать 7Link для перенаправления на вредоносные,
-          мошеннические или нарушающие закон ресурсы, а также для распространения
-          вредоносного ПО. Мы оставляем за собой право отключить ссылки,
-          нарушающие эти условия.
+          You may not use 7Link to redirect to malicious, fraudulent, or
+          unlawful resources, or to distribute malware. We reserve the right to
+          disable links that violate these terms.
         </p>
       </LegalSection>
-      <LegalSection heading="Доступность">
+      <LegalSection heading="Availability">
         <p>
-          Мы стремимся обеспечить стабильную работу сервиса, однако не
-          гарантируем бесперебойную доступность и можем проводить технические
-          работы без предварительного уведомления.
+          We aim to keep the service stable, but we do not guarantee
+          uninterrupted availability and may carry out maintenance without prior
+          notice.
         </p>
       </LegalSection>
-      <LegalSection heading="Ответственность">
+      <LegalSection heading="Liability">
         <p>
-          Сервис предоставляется на условиях «как есть». 7Link не несёт
-          ответственности за содержимое сайтов, на которые ведут созданные вами
-          ссылки, и за убытки, возникшие в результате их использования.
+          The service is provided on an &ldquo;as is&rdquo; basis. 7Link is not
+          responsible for the content of the sites your links point to, or for
+          any damages arising from their use.
         </p>
       </LegalSection>
-      <LegalSection heading="Изменения условий">
+      <LegalSection heading="Changes to the terms">
         <p>
-          Условия могут обновляться. Актуальная версия всегда доступна на этой
-          странице. По вопросам пишите на{" "}
+          These terms may be updated. The current version is always available on
+          this page. For any questions, write to{" "}
           <a
             href={contact.emailHref}
             className="text-primary underline-offset-4 hover:underline"

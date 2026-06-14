@@ -24,8 +24,8 @@ export function QuoteBlock() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="text-2xl leading-snug font-medium tracking-tight text-balance text-foreground sm:text-3xl lg:text-4xl"
         >
-          «7Link защищает ваш сайт — и пользователь не делает{" "}
-          <span className="text-primary">ни единого лишнего клика</span>.»
+          “7Link protects your site — and the visitor doesn&apos;t make{" "}
+          <span className="text-gradient">a single extra click</span>.”
         </motion.blockquote>
       </div>
     </section>
